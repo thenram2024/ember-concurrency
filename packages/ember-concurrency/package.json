@@ -22,16 +22,14 @@
     "prepare": "pnpm build"
   },
   "peerDependencies": {
+    "ember-source": "^3.28.0 || ^4.0.0 || >=5.0.0",
+    "@glimmer/tracking": "^1.1.2",
     "@glint/template": ">= 1.0.0"
   },
   "peerDependenciesMeta": {
     "@glint/template": {
       "optional": true
     }
-  },
-  "overrides": {
-    "ember-source": "^3.28.0 || ^4.0.0 || >=5.0.0",
-    "@glimmer/tracking": "^1.1.2"
   },
   "engines": {
     "node": "16.* || >= 18"
@@ -106,7 +104,9 @@
     "@babel/helper-plugin-utils": "^7.12.13",
     "@babel/types": "^7.12.13",
     "decorator-transforms": "^1.0.1",
-    "@embroider/addon-shim": "^1.8.7"
+    "@embroider/addon-shim": "^1.8.7",
+    "@glimmer/tracking": "^1.1.2",
+    "ember-source": "^4.0.0"
   },
   "ember": {
     "version": 2,
