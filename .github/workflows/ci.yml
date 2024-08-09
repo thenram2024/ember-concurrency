@@ -20,7 +20,7 @@ jobs:
     steps:
     - uses: wyvox/action@v1
       with:
-        pnpm-args: --no-frozen-lockfile
+        pnpm-args: --frozen-lockfile
 
     - name: Lint
       run: pnpm lint
@@ -38,7 +38,7 @@ jobs:
     steps:
     - uses: wyvox/action@v1
       with:
-        pnpm-args: --no-frozen-lockfile
+        pnpm-args: --frozen-lockfile
 
     - name: Test
       run: pnpm test:ember --launch ${{ matrix.browser }}
@@ -56,7 +56,7 @@ jobs:
     steps:
     - uses: wyvox/action@v1
       with:
-        pnpm-args: --no-frozen-lockfile
+        pnpm-args: --frozen-lockfile
 
     - name: Test
       run: pnpm test:ember --launch ${{ matrix.browser }}
@@ -92,7 +92,7 @@ jobs:
     steps:
     - uses: wyvox/action@v1
       with:
-        pnpm-args: --no-frozen-lockfile
+        pnpm-args: --frozen-lockfile
 
     - name: Test
       env:

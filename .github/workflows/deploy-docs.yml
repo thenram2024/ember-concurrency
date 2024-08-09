@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: wyvox/action@v1
         with:
-          pnpm-args: --no-frozen-lockfile
+          pnpm-args: --frozen-lockfile
 
       - name: Build docs assets
         run: pnpm --filter test-app docs:buildall && find ./packages/test-app/dist
