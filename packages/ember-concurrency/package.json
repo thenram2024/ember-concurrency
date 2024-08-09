@@ -5,7 +5,7 @@
   "scripts": {
     "build": "concurrently 'npm:build:*'",
     "build:js": "rollup --config",
-    "build:types": "glint --declaration && cp src/index.d.ts declarations/index.d.ts",
+    "build:types": "glint --declaration && node copy.js",
     "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\"",
     "lint:fix": "concurrently 'npm:lint:*:fix' --names 'fix:'",
     "lint:hbs": "ember-template-lint .",
@@ -22,14 +22,16 @@
     "prepare": "pnpm build"
   },
   "peerDependencies": {
-    "ember-source":"^3.28.0 || ^4.0.0 || >=5.0.0",
-    "@glimmer/tracking": "^1.1.2",
     "@glint/template": ">= 1.0.0"
   },
   "peerDependenciesMeta": {
     "@glint/template": {
       "optional": true
     }
+  },
+  "overrides": {
+    "ember-source":"^3.28.0 || ^4.0.0 || >=5.0.0",
+    "@glimmer/tracking": "^1.1.2"
   },
   "engines": {
     "node": "16.* || >= 18"
