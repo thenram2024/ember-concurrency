@@ -18,7 +18,8 @@
     "start": "concurrently 'npm:start:*'",
     "start:js": "rollup --config --watch --no-watch.clearScreen",
     "start:types": "glint --declaration --watch",
-    "test": "echo 'Addon does not have tests, run tests in test-app'"
+    "test": "echo 'Addon does not have tests, run tests in test-app'",
+    "prepare": "pnpm build"
   },
   "peerDependencies": {
     "ember-source": "^3.28.0 || ^4.0.0 || >=5.0.0",
