@@ -19,7 +19,7 @@
     "start:js": "rollup --config --watch --no-watch.clearScreen",
     "start:types": "glint --declaration --watch",
     "test": "echo 'Addon does not have tests, run tests in test-app'",
-    "prepare": "pnpm build"
+    "prepack": "pnpm build"
   },
   "peerDependencies": {
     "@glint/template": ">= 1.0.0"
@@ -29,7 +29,7 @@
       "optional": true
     }
   },
-  "resolutions": {
+  "overrides": {
     "ember-source": "^3.28.0 || ^4.0.0 || >=5.0.0",
     "@glimmer/tracking": "^1.1.2"
   },
@@ -58,7 +58,7 @@
     "eslint-plugin-ember": "^11.12.0",
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-qunit": "^7.3.4",
-    "ember-soure":"^5.0.0",
+    "ember-source":"^4.0.0",
     "prettier": "^3.1.0",
     "rollup": "^4.9.6",
     "rollup-plugin-copy": "^3.5.0",
